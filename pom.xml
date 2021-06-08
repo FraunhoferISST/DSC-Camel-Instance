@@ -45,7 +45,7 @@
         <maven.minimum.version>3.3.9</maven.minimum.version>
 
         <!-- Dependencies -->
-        <camel-springboot.version>3.9.0</camel-springboot.version>
+        <camel-springboot.version>3.10.0</camel-springboot.version>
         <postgres.version>42.2.20</postgres.version>
         <tidy.version>1.1.0</tidy.version>
         <objenesis.version>3.2</objenesis.version>
@@ -180,7 +180,7 @@
             <dependency>
                 <groupId>org.apache.camel.springboot</groupId>
                 <artifactId>camel-spring-boot-bom</artifactId>
-                <version>3.9.0</version>
+                <version>${camel-springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
