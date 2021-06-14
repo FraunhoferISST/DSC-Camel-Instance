@@ -10,7 +10,6 @@ import javax.net.ssl.SSLContext;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.component.http.HttpComponent;
-import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -70,7 +69,7 @@ public class CamelHttpConfig {
             NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
         final var sslContext = SSLContexts
                 .custom()
-                .loadTrustMaterial(ResourceUtils.getFile(trustStoreLocation),
+                .loadTrustMaterial(ResourceUtils.getURL(trustStoreLocation),
                         trustStorePassword.toCharArray())
                 .build();
 
