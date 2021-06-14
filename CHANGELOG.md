@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file.
 
 - Add custom truststore for Camel HTTP component (configurable via application.properties).
 
+### Removed
+
+- RollingFileAppender in `log4j2.xml`.
+
 ## [1.0.1] - 2021-06-09
 
 ### Changed
