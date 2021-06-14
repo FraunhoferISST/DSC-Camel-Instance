@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Add Dataspace Connector's truststore and configure Camel HTTP component to use it instead of the default.
+- Add custom truststore for Camel HTTP component (configurable via application.properties).
 
 ## [1.0.1] - 2021-06-09
 
