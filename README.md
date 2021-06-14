@@ -15,7 +15,7 @@ standalone in parallel to the connector, as can be done with this Camel applicat
 * [Deployment](#deployment)
 * [Deploying Camel routes](#deploying-camel-routes)
 * [Defining Camel routes](#defining-camel-routes)
-* [Using the Dataspace Connector with SSL enabled](#using-the-dataspace-connector-with-ssl-enabled)
+* [SSL with Camel HTTP component](#ssl-with-camel-http-component)
 * [Using apps](#using-apps)
 * [Contributing](#contributing)
 * [License](#license)

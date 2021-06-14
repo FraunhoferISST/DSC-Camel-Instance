@@ -2,11 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 
+## [1.1.0] - 2021-06-14
 
 ### Added
 
-- Add custom truststore for Camel HTTP component (configurable via application.properties).
+- Add custom truststore for Camel HTTP component (configurable via `application.properties`).
+
+### Changed
+
+- Change Spring Boot version to 2.5.1.
+- Change Postgres version to 42.2.21.
 
 ### Removed
 
