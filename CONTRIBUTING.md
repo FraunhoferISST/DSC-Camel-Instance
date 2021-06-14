@@ -45,14 +45,14 @@ developer that takes on the issue. New issues should be initially marked with `s
 
 ## Branches
 
-This repository has a `master` branch, into which all changes from other branches are merged and where
+This repository has a `main` branch, into which all changes from other branches are merged and where
 release versions are tagged.
 
 After creating an issue yourself or if you want to address an existing issue, you have to create a 
 branch with a unique number and name that assigns it to an issue. Therefore, follow the guidelines 
 at https://deepsource.io/blog/git-branch-naming-conventions/. After your changes, update the 
 `README.md`, Wiki, and `CHANGELOG.md` with necessary details. Then, create a pull request and note 
-that **committing to the master is not allowed**. Please use the feature `linked issues` to link 
+that **committing to the main branch is not allowed**. Please use the feature `linked issues` to link 
 issues and pull requests. 
 
 ## Commits
