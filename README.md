@@ -283,10 +283,10 @@ artifact with ID *927906f2-5ee1-4678-9ace-5f1f2368606c* and write it to a file l
 ## SSL with Camel HTTP component
 
 Per default, the Camel HTTP component can not work with self-signed certificates. It has been configured to use the
-same truststore as the Dataspace Connector and thus can communicate with the Dataspace Connector using HTTPS 
-out-of-the-box. 
+same truststore as the Dataspace Connector and thus accepts the Dataspace Connector's *keystore-localhost.p12* 
+certificate as well as certificates issued by the *IDS Test CA* out-of-the-box. 
 
-For calling any other HTTP services or backends using self-signed certificates in Camel routes, an implementation of the
+For calling any HTTP services or backends using other self-signed certificates in Camel routes, an implementation of the
 *org.apache.camel.component.http.HttpClientConfigurer* that works with self-signed certificates has been added to this
 project (`src/main/java/de/fraunhofer/isst/dataspaceconnector/camel/util/SelfSignedHttpClientConfigurer`). **Note that
 this disables the hostname verification and thus is not secure!** To use this HttpClientConfigurer in routes, declare
