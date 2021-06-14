@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.1] 
+## [1.1.0] - 
+
+### Added
+
+- Add custom truststore for Camel HTTP component (configurable via application.properties).
+
+## [1.0.1] - 2021-06-09
 
 ### Changed
 
