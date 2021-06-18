@@ -81,9 +81,6 @@ public class CamelHttpConfig {
 
         final var connectionManager = new PoolingHttpClientConnectionManager(socketFactoryRegistry);
 
-        final var httpComponent = camelContext.getComponent("http", HttpComponent.class);
-        httpComponent.setClientConnectionManager(connectionManager);
-
         final var httpsComponent = camelContext.getComponent("https", HttpComponent.class);
         httpsComponent.setClientConnectionManager(connectionManager);
     }
