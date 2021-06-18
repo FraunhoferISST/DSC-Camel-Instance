@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 
+
+### Fixed 
+
+- Remove custom connection manager for HTTP component, to allow using HTTP URLs.
+
 ## [1.1.0] - 2021-06-14
 
 ### Added
