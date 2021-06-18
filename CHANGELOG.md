@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2021-06-18
+
+### Changed
+
+- Change Postgres version to 42.2.22.
+
+### Fixed 
+
+- Remove custom connection manager for HTTP component, to allow using HTTP URLs.
+
 ## [1.1.0] - 2021-06-14
 
 ### Added
