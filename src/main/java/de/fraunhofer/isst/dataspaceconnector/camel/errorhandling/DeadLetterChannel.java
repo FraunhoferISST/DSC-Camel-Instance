@@ -1,0 +1,33 @@
+package de.fraunhofer.isst.dataspaceconnector.camel.errorhandling;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+/**
+ * Defines the route used for handling errors, which will send an error description to the
+ * Configuration Manager endpoint defined in application.properties.
+ */
+@Component
+public class DeadLetterChannel extends RouteBuilder {
+
+    /**
+     * The Configuration Manager endpoint for logging errors.
+     */
+    @Value("${config-manager.error-api.url}")
+    private String errorLogEndpoint;
+
+    /**
+     * Configures the error route. The error route uses a processor to create an {@link ErrorDto}
+     * and then sends this to the Configuration Manager.
+     *
+     * @throws Exception if an error occurs writing the ErrorDto as JSON.
+     */
+    @Override
+    public void configure() throws Exception {
+        from("direct:deadLetterChannel")
+                .process("dlcProcessor")
+                .to(errorLogEndpoint);
+    }
+
+}
