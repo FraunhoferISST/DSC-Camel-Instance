@@ -12,7 +12,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class ErrorDto {
+public class RouteError {
 
     /**
      * ID of the route where an error occurred.

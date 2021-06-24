@@ -19,7 +19,7 @@ public class DeadLetterChannel extends RouteBuilder {
     private String errorLogEndpoint;
 
     /**
-     * Configures the error route. The error route uses a processor to create an {@link ErrorDto}
+     * Configures the error route. The error route uses a processor to create an {@link RouteError}
      * and then sends this to the Configuration Manager.
      *
      * @throws Exception if an error occurs writing the ErrorDto as JSON.

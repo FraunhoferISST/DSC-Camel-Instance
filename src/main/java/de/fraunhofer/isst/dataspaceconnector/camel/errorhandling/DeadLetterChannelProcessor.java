@@ -7,7 +7,7 @@ import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
 /**
- * Prepares an {@link ErrorDto} for a failed exchange.
+ * Prepares an {@link RouteError} for a failed exchange.
  */
 @Component("dlcProcessor")
 @Log4j2
@@ -20,7 +20,7 @@ public class DeadLetterChannelProcessor implements Processor {
 
     /**
      * Reads the route's ID, the endpoint where the exchange failed and the exception that caused
-     * the failure from an Exchange object and creates an {@link ErrorDto}. The ErrorDto is set as
+     * the failure from an Exchange object and creates an {@link RouteError}. The ErrorDto is set as
      * the body of the exchange's message.
      *
      * @param exchange the failed exchange.
@@ -32,7 +32,7 @@ public class DeadLetterChannelProcessor implements Processor {
         final var failureEndpoint = exchange.getProperty("CamelFailureEndpoint", String.class);
         final var cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
 
-        final var errorDto = new ErrorDto(routeId, failureEndpoint, cause.getMessage());
+        final var errorDto = new RouteError(routeId, failureEndpoint, cause.getMessage());
 
         log.warn("Caught an exception during route execution: {}", errorDto);
 
