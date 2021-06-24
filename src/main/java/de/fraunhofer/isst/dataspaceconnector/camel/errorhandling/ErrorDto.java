@@ -3,6 +3,7 @@ package de.fraunhofer.isst.dataspaceconnector.camel.errorhandling;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * DTO for sending error information to the Configuration Manager.
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
 public class ErrorDto {
 
     /**
