@@ -37,6 +37,7 @@ public class DeadLetterChannel extends RouteBuilder {
 
         from("direct:deadLetterChannel")
                 .process("dlcProcessor")
+                .setHeader(Exchange.HTTP_METHOD, constant("POST"))
                 .to(errorLogEndpoint);
     }
 
