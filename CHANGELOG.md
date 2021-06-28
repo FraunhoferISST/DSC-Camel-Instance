@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 
+
+### Changed
+
+- Change Spring Boot version to 2.5.2.
+
 ## [1.1.1] - 2021-06-18
 
 ### Changed
