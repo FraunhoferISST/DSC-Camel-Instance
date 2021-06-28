@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.2] - 
+## [1.2.0] - 2021-06-28
+
+### Added
+
+- Log errors during route execution to the Configuration Manager.
 
 ### Changed
 
