@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.1] -
+## [1.2.1] - 2021-06-29
+
+### Added
+
+- Add timestamp to route error log messages.
 
 ### Changed
 
