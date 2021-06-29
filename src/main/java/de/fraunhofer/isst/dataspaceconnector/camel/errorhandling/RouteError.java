@@ -29,4 +29,9 @@ public class RouteError {
      */
     private String message;
 
+    /**
+     * Timestamp of when route error object was created.
+     */
+    private String timestamp;
+
 }

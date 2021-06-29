@@ -1,5 +1,7 @@
 package de.fraunhofer.isst.dataspaceconnector.camel.errorhandling;
 
+import java.time.LocalDateTime;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.log4j.Log4j2;
 import org.apache.camel.Exchange;
@@ -32,11 +34,12 @@ public class DeadLetterChannelProcessor implements Processor {
         final var failureEndpoint = exchange.getProperty("CamelFailureEndpoint", String.class);
         final var cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
 
-        final var errorDto = new RouteError(routeId, failureEndpoint, cause.getMessage());
+        final var routeError = new RouteError(routeId, failureEndpoint, cause.getMessage(),
+                LocalDateTime.now().toString());
 
-        log.warn("Caught an exception during route execution: {}", errorDto);
+        log.warn("Caught an exception during route execution: {}", routeError);
 
-        exchange.getIn().setBody(objectMapper.writeValueAsString(errorDto));
+        exchange.getIn().setBody(objectMapper.writeValueAsString(routeError));
     }
 
 }
