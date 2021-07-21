@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2] - 2021-07-21
+
+### Changed
+
+- Change Postgres version to 42.2.23.
+
+### Fixed
+
+- Add globally trusted CAs to truststore.
+
 ## [1.2.1] - 2021-06-29
 
 ### Added
